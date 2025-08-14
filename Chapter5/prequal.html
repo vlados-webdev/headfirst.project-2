@@ -14,7 +14,23 @@
         color: "yellow",
         passenger: 4,
         convertible: false,
-        mileage: 281341
+        mileage: 281341,
+        started: false,
+
+            start: function () {
+                this.started = true;
+            },
+            stop: function () {
+                this.started = false;
+            },
+
+            drive: function () {
+                if (this.started) {
+                    alert("Zoom, zoom");
+                } else {
+                    alert("You need to start the engine first.");
+                }
+            }
     };
     
     function prequal(car) {
